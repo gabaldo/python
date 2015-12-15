@@ -66,10 +66,10 @@ def saida_delegacia(recebe_prf):
 def pesquisa_status_5():
 	for prf in prfs:
 		if prf[0] == 5:
-			if busca_delegacia(prf)== 1:
+			if busca_delegacia(prf):
 				prf[0] = 1
 			else:
-				if busca_provavel_saida(prf[2]) == 1:
+				if busca_provavel_saida(prf[2]):
 					#print(prf[1], 'aguardando futura saida')
 					prf[0] = 5
 				else:
@@ -78,10 +78,10 @@ def pesquisa_status_5():
 
 
 for prf in prfs:
-	if busca_delegacia(prf)== 1:
+	if busca_delegacia(prf):
 		prf[0] = 1
 	else:
-		if busca_provavel_saida(prf[2]) == 1:
+		if busca_provavel_saida(prf[2]):
 			#print(prf[1], 'aguardando futura saida')
 			prf[0] = 5
 		else:
